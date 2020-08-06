@@ -8,11 +8,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class AccountTest {
 
     @Test
-	@Disabled
-//    public void depositAnAmountToIncreaseTheBalance() {
-//        assertThat("your first test").isBlank();
-//    }
-//    @Test
     public void depositZeroAccountBalance(){
         Account account = new Account();
         assertThat(account.balance()).isEqualTo(0);
@@ -21,6 +16,8 @@ public class AccountTest {
     @Test
     public void depositAmount(){
         Account account = new Account();
-
+        account.deposit(10);
+        account.deposit(20);
+        assertThat(account.balance()).isEqualTo(30);
     }
 }
