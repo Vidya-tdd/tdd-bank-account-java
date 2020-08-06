@@ -7,15 +7,16 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class AccountTest {
 
+    private Account account = new Account();
+
+
     @Test
     public void depositZeroAccountBalance(){
-        Account account = new Account();
         assertThat(account.balance()).isEqualTo(0);
     }
 
     @Test
     public void depositAmountToAccount(){
-        Account account = new Account();
         account.deposit(10);
         account.deposit(20);
         assertThat(account.balance()).isEqualTo(30);
