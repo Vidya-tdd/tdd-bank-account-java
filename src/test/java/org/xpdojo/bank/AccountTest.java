@@ -14,7 +14,7 @@ public class AccountTest {
     }
 
     @Test
-    public void depositAmount(){
+    public void depositAmountToAccount(){
         Account account = new Account();
         account.deposit(10);
         account.deposit(20);
